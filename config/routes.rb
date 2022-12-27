@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # User routes
   resources :users, only: %i[new create edit update show destroy]
+  # get "signup", to: "users#new"
 
   #Sessions routes
   get "/login", to: "sessions#login"
