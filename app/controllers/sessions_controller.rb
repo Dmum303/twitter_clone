@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     if !!@user && @user.authenticate(params[:password])
       #set session and redirect on success
       session[:user_id] = @user.id
-      redirect_to_user_path
+      redirect_to user_path
     else
       #error message on fail
       message =
