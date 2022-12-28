@@ -6,7 +6,9 @@
 <ul>
     <% @posts.each do |post|%>
     <li>
-        <%= post.body %>
+        <%= post.body %><br>
+         <a href="/posts/<%= post.id %>">
+        <%= post.body %></a>
     </li>
     <% end %>
 

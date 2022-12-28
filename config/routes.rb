@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   # root
   root "posts#index"
 
-  get "posts", to: "posts#index"
-  get "posts/:id", to: "posts#show"
+  #posts
+  resources :posts
+  # get "posts", to: "posts#index"
+  # get "posts/:id", to: "posts#show"
+
+  #signup and sessions
   get "signup", to: "users#new"
   get "login", to: "sessions#new"
   post "login", to: "sessions#create"
