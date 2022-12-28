@@ -14,4 +14,9 @@ class ApplicationController < ActionController::Base
       redirect_to login_path
     end
   end
+
+  # def find_username_by_id(id_num)
+  #   # @user = User.find(id_num)
+  #   "Chips"
+  # end
 end

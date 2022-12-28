@@ -5,11 +5,10 @@
 
 <ul>
     <% @posts.each do |post|%>
-    <li>
-        <%= post.body %><br>
-         <a href="/posts/<%= post.id %>">
-        <%= post.body %></a>
-    </li>
+        <%= link_to post.body, post %><br>
+        <%= find_username_by_id(2)%>
+        <p>User id is <%= post.user_id %></p>
+
     <% end %>
 
 <% if logged_in? %>
