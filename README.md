@@ -6,6 +6,7 @@ application up and running.
 Things you may want to cover:
 
 - start sever bin/rails server
+- rails IRB in/rails console
 
 - Ruby version
 
