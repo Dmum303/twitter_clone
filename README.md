@@ -170,3 +170,9 @@ You can see your test coverage when you run your tests. If you want this in a gr
                                   │                              │
                                   │                              │
                                   └──────────────────────────────┘
+
+A user can have many tweets
+A tweet can only have one user - tweet has user FK - can user this to look up user in db
+
+A tweet can have many comments
+A comment can only have one tweet - comment has tweet FK - can user this to look up user in db
