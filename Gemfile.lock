@@ -89,6 +89,8 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     erubi (1.12.0)
+    flexbox-rails (1.2.2)
+      rails (>= 3.1)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -223,6 +225,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  flexbox-rails
   importmap-rails
   jbuilder
   puma (~> 5.0)
