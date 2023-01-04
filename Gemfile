@@ -76,3 +76,5 @@ gem "ruby-lsp", "~> 0.3.7", :group => :development
 gem 'bcrypt', '3.1.18', :require => 'bcrypt'
 
 gem 'flexbox-rails'
+
+gem 'byebug', require: true
