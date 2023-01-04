@@ -1,7 +1,6 @@
 class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
-    puts "this is here"
     amended_params = comment_params
     amended_params[:user_id] = session[:user_id]
     amended_params[:post_id] = params[:post_id]
