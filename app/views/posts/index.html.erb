@@ -3,7 +3,9 @@
 <h3>A place for bile</h3>
 <h3>Posts</h3>
 
-<%= link_to "Create Post", new_post_path %>
+<% if logged_in? %>
+    <%= link_to "Create Post", new_post_path %>
+<% end %>
 
 <ul>
     <% @posts.each do |post|%>
@@ -15,8 +17,15 @@
 
 <% if logged_in? %>
     <h4>Logged in as <%=current_user.username%></h4>
+<% else %>
+    <h4>Not logged in</h4>
 <% end %>
 
-<li><%= link_to "Signup", signup_path%></li>
-<li><%= link_to "login", login_path%></li>
- <%= button_to "logout", logout_path, method: :delete %>
+
+<% if !logged_in? %>
+    <li><%= link_to "Signup", signup_path%></li>
+    <li><%= link_to "login", login_path%></li>
+<% else %>
+     <%= button_to "logout", logout_path, method: :delete %>
+<% end %>
+
