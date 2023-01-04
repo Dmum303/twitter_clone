@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
-    params.comments[:user_id] = session[:user_id]
-    params.comments[:post_id] = params[:post_id]
-    puts "This is here"
+    params[:user_id] = "6"
+    puts "this is here"
+    puts session[:user_id].to_s
     puts params
     @comment = @post.comments.create(comment_params)
 
