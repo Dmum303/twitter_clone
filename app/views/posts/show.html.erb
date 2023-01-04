@@ -16,8 +16,7 @@
   <p>
     <strong>Comment:</strong>
     <%= comment.body %><br>
-     <%= find_username_by_id(comment.user_id) %><br>
-     <%= comment.post_id %>
+     By <%= find_username_by_id(comment.user_id) %>
   </p>
 <% end %>
 
