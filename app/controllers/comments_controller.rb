@@ -3,9 +3,12 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     params[:user_id] = "6"
     puts "this is here"
-    puts session[:user_id].to_s
-    puts params
-    @comment = @post.comments.create(comment_params)
+    # puts session[:user_id].to_s
+    amended_params = comment_params
+    amended_params[:user_id] = session[:user_id]
+    amended_params[:post_id] = params[:post_id]
+    puts amended_params
+    @comment = @post.comments.create(amended_params)
 
     # below looks wrong, is it calling the the create method on the post class?
     # or is it creating a comment in the post colum of db with comment params?
