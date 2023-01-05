@@ -14,9 +14,9 @@
 <h2>Comments</h2>
 <% @post.comments.each do |comment| %>
   <p>
-    <strong>Comment:</strong>
+    <strong>:</strong>
     <%= comment.body %><br>
-     By <%= find_username_by_id(comment.user_id) %>
+     By email <%= find_username_by_id(comment.user_id) %>
   </p>
 <% end %>
 
