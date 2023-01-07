@@ -1,31 +1,38 @@
-<h1>Bitter</h1>
+<div class="layout">
+    <div class="layout__left-sidebar">
+        <h1>Bitter</h1>
 
-<h3>A place for bile</h3>
-<h3>Posts</h3>
+        <h3>A place for bile</h3>
 
-<% if logged_in? %>
-    <%= link_to "Create Post", new_post_path %>
-<% end %>
+       <% if logged_in? %>
+            <h4>Logged in email as <%=current_user.username%></h4>
+        <% else %>
+            <h4>Not logged in</h4>
+        <% end %>
 
-<ul>
-    <% @posts.each do |post|%>
-        <%= link_to post.body, post %><br>
+        <% if !logged_in? %>
+            <li><%= link_to "Signup", signup_path%></li>
+            <li><%= link_to "login", login_path%></li>
+        <% else %>
+            <%= button_to "logout", logout_path, method: :delete %>
+        <% end %>
+    </div>
+    <div class="layout__main">
+        <h3>Posts</h3>
 
-        <p>email <%= find_username_by_id(post.user_id)%></p>
+        <% if logged_in? %>
+            <%= link_to "Create Post", new_post_path %>
+        <% end %>
 
-    <% end %>
+        <ul>
+        <% @posts.each do |post|%>
+            <%= link_to post.body, post %><br>
 
-<% if logged_in? %>
-    <h4>Logged in email as <%=current_user.username%></h4>
-<% else %>
-    <h4>Not logged in</h4>
-<% end %>
+            <p>email <%= find_username_by_id(post.user_id)%></p>
 
-
-<% if !logged_in? %>
-    <li><%= link_to "Signup", signup_path%></li>
-    <li><%= link_to "login", login_path%></li>
-<% else %>
-     <%= button_to "logout", logout_path, method: :delete %>
-<% end %>
-
+        <% end %>
+    </div>
+    <div class="layout__right-sidebar">
+        <h3>Right Sidebar</h3>
+    </div>
+</div>
