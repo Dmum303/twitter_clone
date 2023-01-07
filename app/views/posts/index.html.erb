@@ -1,9 +1,22 @@
 <div class="layout">
     <div class="layout__left-sidebar">
-        <h1>Bitter</h1>
+        <div class="sidebar-menu">
 
-        <h3>A place for bile</h3>
+        <h1>Bitter.</h1>
 
+        <div class="sidebar-menu__item">
+        <div class="icon_list">
+            <ul>
+                <p><i class="fa-solid fa-beer-mug-empty fa-xl fa-beat"></i></p>
+                <p><i class="fa-solid fa-house fa-xl"></i>Home</p>
+                <p><i class="fa-solid fa-bell fa-xl"></i>Notifications</p>
+                <p><i class="fa-solid fa-envelope fa-xl"></i>Mail</p>
+                <p><i class="fa-solid fa-bookmark fa-xl"></i>Bookmarks</p>
+                <p><i class="fa-solid fa-magnifying-glass fa-xl"></i>Search</p>
+                <p><i class="fa-solid fa-gear fa-xl"></i>Settings</p>
+            </ul>
+        </div>
+        </div>
        <% if logged_in? %>
             <h4>Logged in email as <%=current_user.username%></h4>
         <% else %>
@@ -17,6 +30,7 @@
             <%= button_to "logout", logout_path, method: :delete %>
         <% end %>
     </div>
+    </div>
     <div class="layout__main">
         <h3>Posts</h3>
 
@@ -24,15 +38,20 @@
             <%= link_to "Create Post", new_post_path %>
         <% end %>
 
-        <ul>
+
         <% @posts.each do |post|%>
             <%= link_to post.body, post %><br>
 
             <p>email <%= find_username_by_id(post.user_id)%></p>
 
         <% end %>
+
     </div>
-    <div class="layout__right-sidebar">
-        <h3>Right Sidebar</h3>
+    <div class="layout__right-sidebar-container">
+        <div class="layout__right-sidebar">
+            <h3>Right Sidebar</h3>
+        </div>
     </div>
 </div>
+
+<script src="https://kit.fontawesome.com/b8d0c966b8.js" crossorigin="anonymous"></script>
