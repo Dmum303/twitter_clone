@@ -28,15 +28,17 @@
   position: fixed;
 }
 
+.brand {
+  height: 28px;
+  filter: invert(51%) sepia(36%) saturate(5536%) hue-rotate(183deg)
+    brightness(103%) contrast(88%);
+}
+
 .sidebar-menu__item {
   font-size: 19px;
   color: #0f141a;
   display: flex;
   align-items: centre;
-}
-
-.brand {
-  height: 28px;
 }
 
 /* #icon {
