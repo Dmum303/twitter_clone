@@ -1,19 +1,36 @@
 <div class="layout">
     <div class="layout__left-sidebar">
+        <%= embedded_svg('twitter', class: 'brand') %>
+        <%# <p>Bitter.</p> %>
         <div class="sidebar-menu">
-
-        <div class="sidebar-menu__item">
-            <%= embedded_svg('beer-icon', class: 'brand') %>
-            <%# <p>Bitter.</p> %>
             <div class="sidebar-menu__item">
-                    <%= embedded_svg('icons8-home', class: 'sidebar-menu__item-icon') %>
+                    <%= embedded_svg('home', class: 'sidebar-menu__item-icon') %>
                     Home
-                    <%= embedded_svg('icons8-mailbox', class: 'sidebar-menu__item-icon') %>
-                    <%= embedded_svg('icons8-search', class: 'sidebar-menu__item-icon') %>
-                    <%= embedded_svg('icons8-bookmark', class: 'sidebar-menu__item-icon') %>
-                    <%= embedded_svg('icons8-settings', class: 'sidebar-menu__item-icon') %>
             </div>
-        </div>
+            <div class="sidebar-menu__item">
+                    <%= embedded_svg('explore', class: 'sidebar-menu__item-icon') %>
+                    Explore
+            </div>
+            <div class="sidebar-menu__item">
+                    <%= embedded_svg('notifications', class: 'sidebar-menu__item-icon') %>
+                    Notifications
+            </div>
+            <div class="sidebar-menu__item">
+                    <%= embedded_svg('messages', class: 'sidebar-menu__item-icon') %>
+                    Messages
+            </div>
+            <div class="sidebar-menu__item">
+                    <%= embedded_svg('bookmark', class: 'sidebar-menu__item-icon') %>
+                    Bookmark
+            </div>
+            <div class="sidebar-menu__item">
+                    <%= embedded_svg('profile', class: 'sidebar-menu__item-icon') %>
+                    Profile
+            </div>
+            <div class="sidebar-menu__item">
+                    <%= embedded_svg('more', class: 'sidebar-menu__item-icon') %>
+                    More
+            </div>
        <% if logged_in? %>
             <h4>Logged in email as <%=current_user.username%><%= embedded_svg('icons8-human-head', class: 'brand') %></h4>
         <% else %>

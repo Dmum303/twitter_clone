@@ -24,23 +24,24 @@
   position: fixed;
 }
 
-.sidebar-menu {
-  position: fixed;
-}
-
 .brand {
   height: 28px;
   filter: invert(51%) sepia(36%) saturate(5536%) hue-rotate(183deg)
     brightness(103%) contrast(88%);
 }
 
+.sidebar-menu {
+  position: fixed;
+}
+
 .sidebar-menu__item {
   font-size: 19px;
-  color: #0f141a;
+  color: #0f1419;
   display: flex;
   align-items: centre;
 }
 
-/* #icon {
-  margin-right: 40px;
-} */
+.sidebar-menu__item-icon {
+  height: 26px;
+  margin-right: 20px;
+}
