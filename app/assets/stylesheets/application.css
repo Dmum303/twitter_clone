@@ -39,9 +39,27 @@
   color: #0f1419;
   display: flex;
   align-items: centre;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.sidebar-menu__item:hover {
+  background: rgba(29, 161, 242, 0.1);
+  color: #1da0f2;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.sidebar-menu__item--active {
+  color: #1da0f2;
 }
 
 .sidebar-menu__item-icon {
   height: 26px;
   margin-right: 20px;
+}
+
+.sidebar-menu__item--active .sidebar-menu__item-icon {
+  filter: invert(51%) sepia(36%) saturate(5536%) hue-rotate(183deg)
+    brightness(103%) contrast(88%);
 }
