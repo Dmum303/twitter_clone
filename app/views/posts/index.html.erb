@@ -49,12 +49,27 @@
             <%= link_to "Create Post", new_post_path %>
         <% end %>
 
-
         <% @posts.each do |post|%>
         <div class="tweet">
-            <img class="tweet__author-logo">
-            <%= link_to post.body, post %><br>
-            <p>email <%= find_username_by_id(post.user_id)%></p>
+            <%=image_tag 'meandpercy.jpeg', :class => "tweet__author-logo" %>
+            <div class="tweet__main">
+                <div class="tweet__header">
+                    <div class="tweet__author-name">
+                        <%= find_username_by_id(post.user_id)%>
+                    </div>
+                    <div class="tweet__author-slug">
+                        @<%= find_username_by_id(post.user_id)%>
+                    </div>
+                    <div class="tweet__publish-time">
+                        <%= post.created_at %>
+                    </div>
+                </div>
+                <div class="tweet__content">
+                    <%= link_to post.body, post %><br>
+                </div>
+            </div>
+
+
         </div>
         <% end %>
 
