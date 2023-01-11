@@ -30,6 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_120220) do
   end
 
   create_table "users", force: :cascade do |t|
+    # username here should be name email - DB to be amended
     t.string "username"
     t.string "password_digest"
     t.datetime "created_at", null: false

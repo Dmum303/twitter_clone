@@ -43,13 +43,12 @@
 
     </div>
     <div class="layout__main">
-        <h3>Posts</h3>
-
         <% if logged_in? %>
             <%= link_to "Create Post", new_post_path %>
         <% end %>
 
         <% @posts.each do |post|%>
+        <%= link_to post do%>
         <div class="tweet">
             <%=image_tag 'meandpercy.jpeg', :class => "tweet__author-logo" %>
             <div class="tweet__main">
@@ -61,16 +60,16 @@
                         @<%= find_username_by_id(post.user_id)%>
                     </div>
                     <div class="tweet__publish-time">
-                        <%= post.created_at %>
+                        <%= ((Time.now() - post.created_at) / 3600).round(1)%>h
                     </div>
                 </div>
                 <div class="tweet__content">
-                    <%= link_to post.body, post %><br>
+                    <%= post.body %>
+                    <img class="tweet__image" src="" />
                 </div>
             </div>
-
-
         </div>
+        <% end %>
         <% end %>
 
     </div>
