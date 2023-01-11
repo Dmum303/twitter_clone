@@ -1,33 +1,6 @@
 <div class="layout">
     <div class="layout__left-sidebar">
-        <%= embedded_svg('twitter', class: 'brand') %>
-        <%# <p>Bitter.</p> %>
-        <div class="sidebar-menu">
-            <div class="sidebar-menu__item sidebar-menu__item--active">
-                    <%= embedded_svg('home', class: 'sidebar-menu__item-icon') %>
-                    Home
-            </div>
-            <div class="sidebar-menu__item">
-                    <%= embedded_svg('explore', class: 'sidebar-menu__item-icon') %>
-                    Explore
-            </div>
-            <div class="sidebar-menu__item">
-                    <%= embedded_svg('notifications', class: 'sidebar-menu__item-icon') %>
-                    Notifications
-            </div>
-            <div class="sidebar-menu__item">
-                    <%= embedded_svg('messages', class: 'sidebar-menu__item-icon') %>
-                    Messages
-            </div>
-            <div class="sidebar-menu__item">
-                    <%= embedded_svg('more', class: 'sidebar-menu__item-icon') %>
-                    more
-            </div>
-            <div class="sidebar-menu__item">
-                    <%= embedded_svg('profile', class: 'sidebar-menu__item-icon') %>
-                    Profile
-            </div>
-        </div>
+    <%= render "sidebar-menu"%>
       <!-- <% if logged_in? %>
             <h4>Logged in email as <%=current_user.username%><%= embedded_svg('icons8-human-head', class: 'brand') %></h4>
         <% else %>
@@ -119,6 +92,61 @@
                     </div>
                     <div class="trends-for-you__meta-information">
                         3,456 Tweets
+                    </div>
+                </div>
+            </div>
+            <div class="who-to-follow">
+                <div class="who-to-follow__block">
+                    <div class="who-to-follow__heading">
+                        Who to follow
+                    </div>
+                    <div class="who-to-follow__block">
+                        <%=image_tag 'meandpercy.jpeg', :class => "who-to-follow__author-logo" %>
+                        <div class="who-to-follow__content">
+                            <div>
+                                <div class="who-to-follow__author-name">
+                                    Conan (the barbarian)
+                                </div>
+                                <div class="who-to-follow__author-slug">
+                                    @Conanthebarbarian
+                                </div>
+                                <div class="who-to-follow__button">
+                                    FOllow
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="who-to-follow__block">
+                        <%=image_tag 'meandpercy.jpeg', :class => "who-to-follow__author-logo" %>
+                        <div class="who-to-follow__content">
+                            <div>
+                                <div class="who-to-follow__author-name">
+                                    McHammer
+                                </div>
+                                <div class="who-to-follow__author-slug">
+                                    @CMcHammer
+                                </div>
+                                <div class="who-to-follow__button">
+                                    FOllow
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="who-to-follow__block">
+                        <%=image_tag 'meandpercy.jpeg', :class => "who-to-follow__author-logo" %>
+                        <div class="who-to-follow__content">
+                            <div>
+                                <div class="who-to-follow__author-name">
+                                    ThePope
+                                </div>
+                                <div class="who-to-follow__author-slug">
+                                    @ThePope
+                                </div>
+                                <div class="who-to-follow__button">
+                                    FOllow
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

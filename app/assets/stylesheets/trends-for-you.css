@@ -1,4 +1,9 @@
 .trends-for-you {
+  border-radius: 15px;
+  background: #f5f8fa;
+  border: 5px solid #f5f8fa;
+  padding: 3px;
+  margin: 5px;
 }
 
 .trends-for-you__block {
@@ -7,10 +12,21 @@
 }
 
 .trends-for-you__heading {
+  font-size: 19px;
+  font-weight: bold;
+  color: #14171a;
 }
 
 .trends-for-you__meta-information {
+  font-size: 13px;
+  font-weight: 300;
+  color: #657786;
 }
 
 .trends-for-you__trend-name {
+  font-size: 15px;
+  color: #14171a;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 2px;
 }
