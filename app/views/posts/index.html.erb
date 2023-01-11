@@ -42,11 +42,18 @@
         <% end %> -->
 
     </div>
+
     <div class="layout__main">
+        <div class="tweet">
+            <div class="tweet__home-header">
+                Home
+            </div>
+        </div>
+       <div class="tweet">
         <% if logged_in? %>
             <%= link_to "Create Post", new_post_path %>
         <% end %>
-
+        </div>
         <% @posts.each do |post|%>
         <%= link_to post do%>
         <div class="tweet">
@@ -75,7 +82,46 @@
     </div>
     <div class="layout__right-sidebar-container">
         <div class="layout__right-sidebar">
-            <h3>Right Sidebar</h3>
+            <div class="trends-for-you">
+                <div class="trends-for-you__block">
+                    <div class="trends-for-you__heading">
+                        Trends for you
+                    </div>
+                </div>
+                <div class="trends-for-you__block">
+                    <div class="trends-for-you__meta-information">
+                        Trending in UK
+                    </div>
+                    <div class="trends-for-you__trend-name">
+                        #Strike action
+                    </div>
+                    <div class="trends-for-you__meta-information">
+                        155k Tweets
+                    </div>
+                </div>
+                <div class="trends-for-you__block">
+                    <div class="trends-for-you__meta-information">
+                        Trending in UK
+                    </div>
+                    <div class="trends-for-you__trend-name">
+                        #PrinceHarryBook
+                    </div>
+                    <div class="trends-for-you__meta-information">
+                        200k Tweets
+                    </div>
+                </div>
+                <div class="trends-for-you__block">
+                    <div class="trends-for-you__meta-information">
+                        Trending - Trending
+                    </div>
+                    <div class="trends-for-you__trend-name">
+                        #Techno
+                    </div>
+                    <div class="trends-for-you__meta-information">
+                        3,456 Tweets
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

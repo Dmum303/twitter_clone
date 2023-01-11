@@ -1,0 +1,5 @@
+.brand {
+  height: 28px;
+  filter: invert(51%) sepia(36%) saturate(5536%) hue-rotate(183deg)
+    brightness(103%) contrast(88%);
+}
