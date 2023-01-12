@@ -1,0 +1,73 @@
+.home-header {
+  display: flex;
+  margin-bottom: 2px;
+  padding: 10px 15px;
+}
+
+.home-header:hover {
+  cursor: pointer;
+}
+
+.home-header__content {
+  font-size: 19px;
+  font-weight: 700;
+  color: #14171a;
+  margin-right: 5px;
+}
+
+.create-tweet {
+  display: flex;
+  border-bottom: 1px solid #e6ecf0;
+  margin-bottom: 2px;
+  padding: 10px 15px;
+}
+
+.show-tweets {
+  border-bottom: 1px solid #e6ecf0;
+  margin-bottom: 2px;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.show-tweets:hover {
+  background: rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+}
+
+.show-tweets__text {
+  color: #1b94e0;
+}
+
+.create-tweet {
+}
+
+.create-tweet__form {
+  padding: 10px 15px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.create-tweet__form-author-logo {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.create-tweet__form-text-area {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.create-tweet__form-submit {
+  border: 1px solid #1da0f2;
+  color: #1da0f2;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 15px;
+  padding: 5px;
+  min-width: 67px;
+  text-align: center;
+}

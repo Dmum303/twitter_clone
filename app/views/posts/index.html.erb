@@ -15,20 +15,26 @@
         <% end %> -->
 
     <div class="layout__main">
-
-        <div class="tweet">
-            <div class="tweet__home-header">
+        <div class="home-header">
+            <div class="home-header__content">
                 Home
             </div>
         </div>
-        <div class="tweet">
+        <div class="create-tweet">
             <%= render "form", post: @post %>
         </div>
-       <div class="tweet">
-        <% if logged_in? %>
+        <div class="show-tweets">
+            <div class="show-tweets__align">
+                <span class="show-tweets__text">
+                    Show 280 Tweets
+                </span>
+            </div>
+        </div>
+<!--     <div class="tweet">
+     <% if logged_in? %>
             <%= link_to "Create Post", new_post_path %>
         <% end %>
-        </div>
+        </div> -->
         <% @posts.each do |post|%>
         <%= link_to post do%>
         <div class="tweet">

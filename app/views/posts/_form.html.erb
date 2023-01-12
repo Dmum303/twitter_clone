@@ -1,14 +1,11 @@
 <%= form_with model: post do |form| %>
-
-  <div>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %><br>
+<div class="create-tweet__form">
+   <!-- <%= form.label :body %><br> -->
+    <%=image_tag 'cat.jpeg', :class => "create-tweet__form-author-logo" %>
+    <%= form.text_area :body, placeholder: "What's happening?", class: "create-tweet__form-text-area " %>
     <% post.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
     <% end %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+    <%= form.submit :class => "create-tweet__form-submit" %>
+</div>
 <% end %>
