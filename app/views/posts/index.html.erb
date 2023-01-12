@@ -30,7 +30,7 @@
         <% @posts.each do |post|%>
         <%= link_to post do%>
         <div class="tweet">
-            <%=image_tag 'meandpercy.jpeg', :class => "tweet__author-logo" %>
+            <%=image_tag 'cat.jpeg', :class => "tweet__author-logo" %>
             <div class="tweet__main">
                 <div class="tweet__header">
                     <div class="tweet__author-name">
@@ -40,7 +40,7 @@
                         @<%= find_username_by_id(post.user_id)%>
                     </div>
                     <div class="tweet__publish-time">
-                        <%= ((Time.now() - post.created_at) / 3600).round(1)%>h
+                        <%= ((Time.now() - post.created_at) / 3600).round(1)%> hours ago
                     </div>
                 </div>
                 <div class="tweet__content">
@@ -95,56 +95,57 @@
                     </div>
                 </div>
             </div>
+
             <div class="who-to-follow">
                 <div class="who-to-follow__block">
                     <div class="who-to-follow__heading">
                         Who to follow
                     </div>
-                    <div class="who-to-follow__block">
-                        <%=image_tag 'meandpercy.jpeg', :class => "who-to-follow__author-logo" %>
-                        <div class="who-to-follow__content">
-                            <div>
-                                <div class="who-to-follow__author-name">
-                                    Conan (the barbarian)
-                                </div>
-                                <div class="who-to-follow__author-slug">
-                                    @Conanthebarbarian
-                                </div>
-                                <div class="who-to-follow__button">
-                                    FOllow
-                                </div>
+                </div>
+                <div class="who-to-follow__block">
+                    <%=image_tag 'conan.jpeg', :class => "who-to-follow__author-logo" %>
+                    <div class="who-to-follow__content">
+                        <div>
+                            <div class="who-to-follow__author-name">
+                                Conan (the barbarian)
+                            </div>
+                            <div class="who-to-follow__author-slug">
+                                @Conanthebarbarian
+                            </div>
+                            <div class="who-to-follow__button">
+                                Follow
                             </div>
                         </div>
                     </div>
-                    <div class="who-to-follow__block">
-                        <%=image_tag 'meandpercy.jpeg', :class => "who-to-follow__author-logo" %>
-                        <div class="who-to-follow__content">
-                            <div>
-                                <div class="who-to-follow__author-name">
-                                    McHammer
-                                </div>
-                                <div class="who-to-follow__author-slug">
-                                    @CMcHammer
-                                </div>
-                                <div class="who-to-follow__button">
-                                    FOllow
-                                </div>
+                </div>
+                <div class="who-to-follow__block">
+                    <%=image_tag 'mchammer.jpeg', :class => "who-to-follow__author-logo" %>
+                    <div class="who-to-follow__content">
+                        <div>
+                            <div class="who-to-follow__author-name">
+                                McHammer
+                            </div>
+                            <div class="who-to-follow__author-slug">
+                                @CMcHammer
+                            </div>
+                            <div class="who-to-follow__button">
+                                Follow
                             </div>
                         </div>
                     </div>
-                    <div class="who-to-follow__block">
-                        <%=image_tag 'meandpercy.jpeg', :class => "who-to-follow__author-logo" %>
-                        <div class="who-to-follow__content">
-                            <div>
-                                <div class="who-to-follow__author-name">
-                                    ThePope
-                                </div>
-                                <div class="who-to-follow__author-slug">
-                                    @ThePope
-                                </div>
-                                <div class="who-to-follow__button">
-                                    FOllow
-                                </div>
+                </div>
+                <div class="who-to-follow__block">
+                    <%=image_tag 'mrblobby.jpeg', :class => "who-to-follow__author-logo" %>
+                    <div class="who-to-follow__content">
+                        <div>
+                            <div class="who-to-follow__author-name">
+                                MrBlobby
+                            </div>
+                            <div class="who-to-follow__author-slug">
+                                @MrBlobby
+                            </div>
+                            <div class="who-to-follow__button">
+                                Follow
                             </div>
                         </div>
                     </div>
