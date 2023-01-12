@@ -39,12 +39,13 @@
 }
 
 .create-tweet {
+  /* display: flex;
+  justify-content: space-between; */
 }
 
-.create-tweet__form {
-  padding: 10px 15px;
-  display: flex;
-  width: 100%;
+.create-tweet__block {
+  /* display: flex; */
+  /* width: 100%; */
   align-items: center;
 }
 
@@ -55,13 +56,26 @@
   margin-right: 10px;
 }
 
-.create-tweet__form-text-area {
-  display: flex;
+.create-tweet__tweet-input {
+  /* display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 300%; */
+  border: 0;
+  font-size: 15px;
 }
 
-.create-tweet__form-submit {
+.create-tweet__tweet-input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.create-tweet__flex-submit {
+  display: flex;
+  justify-content: end;
+}
+
+.create-tweet__submit {
   border: 1px solid #1da0f2;
   color: #1da0f2;
   font-size: 15px;
@@ -70,4 +84,16 @@
   padding: 5px;
   min-width: 67px;
   text-align: center;
+  background-color: #1da0f2;
+  color: #e6ecf0;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+}
+
+.create-tweet__submit:hover {
+  background: rgba(29, 161, 242, 0.1);
+  color: #1da0f2;
+  border-radius: 20px;
+  cursor: pointer;
 }
