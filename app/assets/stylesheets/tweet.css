@@ -18,13 +18,24 @@
 }
 
 /* if I want to style links in the future */
-.tweet a {
-  color: #1b94e0;
+.tweet {
   text-decoration: none;
 }
 
 .tweet a:hover {
   text-decoration: underline;
+}
+
+.tweet a:active,
+a:visited,
+a:link {
+  text-decoration: none;
+  color: #14171a;
+}
+
+.tweet a {
+  color: #1b94e0;
+  text-decoration: none;
 }
 
 .tweet__author-logo {
@@ -60,4 +71,8 @@
   width: 100%;
   border-radius: 15px;
   margin-top: 10px;
+}
+
+.tweet__content {
+  text-decoration: none;
 }

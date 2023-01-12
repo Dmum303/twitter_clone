@@ -31,10 +31,33 @@
 }
 
 .who-to-follow__author-slug {
+  color: #5b7083;
+  font-size: 15px;
+}
+
+.who-to-follow__author-name {
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .who-to-follow__content {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.who-to-follow__button {
+  border: 1px solid #1da0f2;
+  color: #1da0f2;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 15px;
+  padding: 5px;
+  min-width: 67px;
+  text-align: center;
+}
+
+.who-to-follow__button:hover {
+  background: rgba(29, 161, 242, 0.1);
+  cursor: pointer;
 }

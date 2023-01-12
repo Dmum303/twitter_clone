@@ -1,5 +1,5 @@
 <div class="layout">
-    <div class="layout__left-sidebar">
+
     <%= render "sidebar-menu"%>
       <!-- <% if logged_in? %>
             <h4>Logged in email as <%=current_user.username%><%= embedded_svg('icons8-human-head', class: 'brand') %></h4>
@@ -14,13 +14,15 @@
             <%= button_to "logout", logout_path, method: :delete %>
         <% end %> -->
 
-    </div>
-
     <div class="layout__main">
+
         <div class="tweet">
             <div class="tweet__home-header">
                 Home
             </div>
+        </div>
+        <div class="tweet">
+            <%= render "form", post: @post %>
         </div>
        <div class="tweet">
         <% if logged_in? %>
@@ -53,106 +55,6 @@
         <% end %>
 
     </div>
-    <div class="layout__right-sidebar-container">
-        <div class="layout__right-sidebar">
-            <div class="trends-for-you">
-                <div class="trends-for-you__block">
-                    <div class="trends-for-you__heading">
-                        Trends for you
-                    </div>
-                </div>
-                <div class="trends-for-you__block">
-                    <div class="trends-for-you__meta-information">
-                        Trending in UK
-                    </div>
-                    <div class="trends-for-you__trend-name">
-                        #Strike action
-                    </div>
-                    <div class="trends-for-you__meta-information">
-                        155k Tweets
-                    </div>
-                </div>
-                <div class="trends-for-you__block">
-                    <div class="trends-for-you__meta-information">
-                        Trending in UK
-                    </div>
-                    <div class="trends-for-you__trend-name">
-                        #PrinceHarryBook
-                    </div>
-                    <div class="trends-for-you__meta-information">
-                        200k Tweets
-                    </div>
-                </div>
-                <div class="trends-for-you__block">
-                    <div class="trends-for-you__meta-information">
-                        Trending - Trending
-                    </div>
-                    <div class="trends-for-you__trend-name">
-                        #Techno
-                    </div>
-                    <div class="trends-for-you__meta-information">
-                        3,456 Tweets
-                    </div>
-                </div>
-            </div>
+    <%=render "rightside-content"%>
 
-            <div class="who-to-follow">
-                <div class="who-to-follow__block">
-                    <div class="who-to-follow__heading">
-                        Who to follow
-                    </div>
-                </div>
-                <div class="who-to-follow__block">
-                    <%=image_tag 'conan.jpeg', :class => "who-to-follow__author-logo" %>
-                    <div class="who-to-follow__content">
-                        <div>
-                            <div class="who-to-follow__author-name">
-                                Conan (the barbarian)
-                            </div>
-                            <div class="who-to-follow__author-slug">
-                                @Conanthebarbarian
-                            </div>
-                            <div class="who-to-follow__button">
-                                Follow
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="who-to-follow__block">
-                    <%=image_tag 'mchammer.jpeg', :class => "who-to-follow__author-logo" %>
-                    <div class="who-to-follow__content">
-                        <div>
-                            <div class="who-to-follow__author-name">
-                                McHammer
-                            </div>
-                            <div class="who-to-follow__author-slug">
-                                @CMcHammer
-                            </div>
-                            <div class="who-to-follow__button">
-                                Follow
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="who-to-follow__block">
-                    <%=image_tag 'mrblobby.jpeg', :class => "who-to-follow__author-logo" %>
-                    <div class="who-to-follow__content">
-                        <div>
-                            <div class="who-to-follow__author-name">
-                                MrBlobby
-                            </div>
-                            <div class="who-to-follow__author-slug">
-                                @MrBlobby
-                            </div>
-                            <div class="who-to-follow__button">
-                                Follow
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-
-<script src="https://kit.fontawesome.com/b8d0c966b8.js" crossorigin="anonymous"></script>

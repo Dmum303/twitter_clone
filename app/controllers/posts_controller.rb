@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all.reverse
+    @post = Post.new
   end
 
   def show
@@ -16,7 +17,7 @@ class PostsController < ApplicationController
     @post[:user_id] = session[:user_id]
     # this part could be an issue with the comments
     if @post.save
-      redirect_to @post
+      redirect_to root_path
     else
       render :new, status: :unprocessable_entity
     end
