@@ -1,10 +1,10 @@
 
         <div class="sidebar-menu">
-                <%= embedded_svg('twitter', class: 'brand') %>
-            <div class="sidebar-menu__item sidebar-menu__item--active">
+                <a href="<%= posts_path%>"><%= embedded_svg('twitter', class: 'brand') %></a>
+            <a href="<%= posts_path%>"><div class="sidebar-menu__item sidebar-menu__item--active">
                     <%= embedded_svg('home', class: 'sidebar-menu__item-icon') %>
                     Home
-            </div>
+            </div></a>
             <div class="sidebar-menu__item">
                     <%= embedded_svg('explore', class: 'sidebar-menu__item-icon') %>
                     Explore
@@ -29,8 +29,10 @@
                 <% if logged_in? %>
                 <%=image_tag 'cat.jpeg', :class => "logged-in-as__user-logo" %>
                 <div class="logged-in-as__content">
+                        <div>
                         <div class="logged-in-as__current-user"><%=current_user.username%></div>
                         <div class="logged-in-as__current-user-slug"><%=current_user.username%></div>
+                        </div>
                         <%= button_to "logout", logout_path, method: :delete, class: "create-tweet__submit" %>
                  </div>
                 <% else %>
