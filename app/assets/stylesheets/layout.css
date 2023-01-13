@@ -5,6 +5,12 @@
   max-width: 1200px;
 }
 
+/* .layout__left-sidebar {
+  display: flex;
+  flex-direction: column;
+
+} */
+
 .layout__right-sidebar {
   position: fixed;
   width: 350px;

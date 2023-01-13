@@ -1,4 +1,4 @@
-    <div class="layout__left-sidebar">
+
         <div class="sidebar-menu">
                 <%= embedded_svg('twitter', class: 'brand') %>
             <div class="sidebar-menu__item sidebar-menu__item--active">
@@ -25,5 +25,21 @@
                     <%= embedded_svg('profile', class: 'sidebar-menu__item-icon') %>
                     Profile
             </div>
+            <div class="logged-in-as__block">
+                <% if logged_in? %>
+                <%=image_tag 'cat.jpeg', :class => "logged-in-as__user-logo" %>
+                <div class="logged-in-as__content">
+                        <div class="logged-in-as__current-user"><%=current_user.username%></div>
+                        <div class="logged-in-as__current-user-slug"><%=current_user.username%></div>
+                        <%= button_to "logout", logout_path, method: :delete, class: "create-tweet__submit" %>
+                 </div>
+                <% else %>
+                <div class="not-logged-in__block">
+                <h4>Not logged in</h4>
+                <%= link_to "Signup", signup_path%>
+                <%= link_to "login", login_path%>
+                </div>
+                <% end %>
+
+            </div>
         </div>
-    </div>
