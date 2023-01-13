@@ -1,8 +1,7 @@
 <div class="layout">
     <div class="layout__left-sidebar">
         <div class="contain">
-    <%= render "sidebar-menu"%>
-
+          <%= render "sidebar-menu"%>
         </div>
     </div>
 
@@ -68,13 +67,13 @@
 <% end %>
 
 <%= form_with model: [ @post, @post.comments.build ] do |form| %>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+<div class="create-tweet__block">
+  <%=image_tag 'cat.jpeg', :class => "create-tweet__form-author-logo" %>
+    <%= form.text_area :body, placeholder: "Tweet your reply", class: "create-tweet__tweet-input" %>
+</div>
+    <div class="create-tweet__flex-submit">
+    <%= form.submit :class => "create-tweet__submit" %>
+    </div>
 <% end %>
 
 </div>

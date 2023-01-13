@@ -1,4 +1,12 @@
-<h1>Sign up</h1>
+<div class="layout">
+    <div class="layout__left-sidebar">
+        <div class="contain">
+          <%= render "sidebar-menu"%>
+        </div>
+    </div>
+
+    <div class="layout__main">
+<h1>Create your account</h1>
 
 <%= form_with(model: @user, local: true) do |f| %>
 
@@ -27,7 +35,6 @@
 </div>
 
 <% end %>
-
-<li><%= link_to "posts", posts_path%></li>
-<li><%= link_to "login", login_path%></li>
-
+</div>
+  <%=render "rightside-content"%>
+</div>
