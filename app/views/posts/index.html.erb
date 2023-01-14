@@ -13,7 +13,9 @@
                 Home
             </div>
         </div>
+            <% if logged_in? %>
             <%= render "form", post: @post %>
+            <% end %>
         <div class="show-tweets">
             <div class="show-tweets__align">
                 <span class="show-tweets__text">
