@@ -1,7 +1,7 @@
 <div class="layout">
     <div class="layout__left-sidebar">
         <div class="contain">
-          <%= render "sidebar-menu"%>
+        <%= render "sidebar-menu-logged-out"%>
         </div>
     </div>
 
@@ -40,12 +40,11 @@
       </div>
       <div class="signup-form__member">
         Already a member?
-        <a href="#">
-          Login Here </a>
+          <%= link_to "login", login_path%>
       </div>
       <% end %>
     </div>
 
 </div>
-  <%=render "rightside-content"%>
+  <%= render "rightside-content-logged-out"%>
 </div>

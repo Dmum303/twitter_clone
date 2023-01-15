@@ -86,3 +86,14 @@ body {
   color: rgb(17, 107, 143);
   text-decoration: none;
 }
+
+.signup-form__recover {
+  text-align: right;
+  font-size: 0.7rem;
+  margin: 0.3rem 1.4rem 0 0;
+}
+
+.signup-form__recover a {
+  text-decoration: none;
+  color: #464647;
+}

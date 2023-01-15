@@ -1,28 +1,33 @@
 <div class="layout">
     <div class="layout__left-sidebar">
         <div class="contain">
-    <%= render "sidebar-menu"%>
+            <% if logged_in? %>
+            <%= render "sidebar-menu"%>
+            <% else %>
+            <%= render "sidebar-menu-logged-out"%>
+            <% end %>
 
         </div>
     </div>
 
 
     <div class="layout__main">
-        <div class="home-header">
-            <div class="home-header__content">
-                Home
-            </div>
-        </div>
             <% if logged_in? %>
-            <%= render "form", post: @post %>
-            <% end %>
-        <div class="show-tweets">
-            <div class="show-tweets__align">
-                <span class="show-tweets__text">
-                    Show 280 Tweets
-                </span>
+            <div class="home-header">
+                <div class="home-header__content">
+                    Home
+                </div>
             </div>
-        </div>
+            <%= render "form", post: @post %>
+            <div class="show-tweets">
+                <div class="show-tweets__align">
+                    <span class="show-tweets__text">
+                        Show 280 Tweets
+                    </span>
+                </div>
+            </div>
+            <% end %>
+
         <% @posts.each do |post|%>
         <%= link_to post do%>
         <div class="tweet">
@@ -49,6 +54,10 @@
         <% end %>
 
     </div>
+    <% if logged_in? %>
     <%=render "rightside-content"%>
+    <% else %>
+    <%=render "rightside-content-logged-out"%>
+    <% end %>
 
 </div>

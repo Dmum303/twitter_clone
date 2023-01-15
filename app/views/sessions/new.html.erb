@@ -1,31 +1,37 @@
 <div class="layout">
     <div class="layout__left-sidebar">
         <div class="contain">
-          <%= render "sidebar-menu"%>
+          <%= render "sidebar-menu-logged-out"%>
         </div>
     </div>
 
-    <div class="layout__main">
-<h1>Login</h1>
+<div class="layout__main">
+    <div class="signup-form__wrapper">
+        <h1 class="signup-form__header">Login</h1>
 
-<%= form_with(scope: :session, url: login_path) do |f| %>
+        <%= form_with(scope: :session, url: login_path) do |f| %>
 
-<div class="form-group">
-  <%= f.label :email %><br/>
-  <%= f.text_field :username, class: "form-control" %>
+        <div class="form-group">
+          <%= f.label :email %><br/>
+          <%= f.text_field :username, class: "signup-form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password %><br/>
+          <%= f.password_field :password, class: "signup-form-control" %>
+        </div>
+        <div class="signup-form__recover">
+          <a href="#">Forgot Password</a>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Log in", class: "signup-form-button" %>
+        </div>
+        <div class="signup-form__member">
+          Not a member?
+          <%= link_to "Signup", signup_path%>
+        </div>
+        <% end %>
+    </div>
 </div>
-
-<div class="form-group">
-  <%= f.label :password %><br/>
-  <%= f.password_field :password, class: "form-control" %>
-</div>
-
-<div class="form-group">
-  <%= f.submit "Log in", class: "btn btn-primary" %>
-</div>
-
-<% end %>
-
-</div>
-  <%=render "rightside-content"%>
+  <%=render "rightside-content-logged-out"%>
 </div>
