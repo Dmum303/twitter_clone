@@ -1,0 +1,37 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins, sans-serif';
+}
+
+body {
+  background: #dfe9f5;
+} */
+
+.signup-form__wrapper {
+  width: 330px;
+  padding: 2rem 1rem;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgb(0, 0, 0, 0.1);
+}
+
+.signup-form__header {
+  font-size: 2rem;
+  color: #07001f;
+  margin-bottom: 1.2rem;
+}
+
+.signup-form-control {
+  width: 92%;
+  outline: none;
+  border: 1px solid #fff;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+}
+
+.signup-form__terms {
+}

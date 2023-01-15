@@ -5,36 +5,45 @@
         </div>
     </div>
 
-    <div class="layout__main">
-<h1>Create your account</h1>
+<div class="layout__main">
+    <div class="signup-form__wrapper">
 
-<%= form_with(model: @user, local: true) do |f| %>
+      <h1 class="signup-form__header">Create your account</h1>
 
-<div class="form-group">
-  <%= f.label :email %><br/>
-  <%= f.text_field :username, class: "form-control" %>
-</div>
+      <%= form_with(model: @user, local: true) do |f| %>
 
-<div class="form-group">
-  <%= f.label :username %><br/>
-  <%= f.text_field :screen_name, class: "form-control" %>
-</div>
+      <div class="form-group">
+        <%= f.label :email %><br/>
+        <%= f.text_field :username, class: "signup-form-control" %>
+      </div>
 
-<div class="form-group">
-  <%= f.label :your_name %><br/>
-  <%= f.text_field :real_name, class: "form-control" %>
-</div>
+      <div class="form-group">
+        <%= f.label :username %><br/>
+        <%= f.text_field :screen_name, class: "signup-form-control" %>
+      </div>
 
-<div class="form-group">
-  <%= f.label :password %><br/>
-  <%= f.password_field :password, class: "form-control" %>
-</div>
+      <div class="form-group">
+        <%= f.label :your_name %><br/>
+        <%= f.text_field :real_name, class: "signup-form-control" %>
+      </div>
 
-<div class="form-group">
-  <%= f.submit %>
-</div>
+      <div class="form-group">
+        <%= f.label :password %><br/>
+        <%= f.password_field :password, class: "signup-form-control" %>
+      </div>
+      <div class="signup-form__terms">
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox">I agree <a href="#">Terms & Conditions</a></label>
+      </div>
+      <div class="form-group">
+        <%= f.submit %>
+      </div>
+      <div class="member">
+        Already a member? <a href="#">
+          Login Here </a></div>
+      <% end %>
+    </div>
 
-<% end %>
 </div>
   <%=render "rightside-content"%>
 </div>
