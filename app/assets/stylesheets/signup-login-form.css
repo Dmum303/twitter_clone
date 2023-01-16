@@ -49,11 +49,12 @@ body {
   width: 90%;
   color: #fff;
   cursor: pointer;
-  background: rgb(17, 107, 143);
+  background: #1da0f2;
 }
 
 .signup-form-button:hover {
-  background: rgb(17, 107, 143, 0.877);
+  background: rgba(29, 161, 242, 0.1);
+  color: #1da0f2;
 }
 
 .signup-form__terms {

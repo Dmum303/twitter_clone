@@ -4,6 +4,7 @@
   border: 5px solid #f5f8fa;
   padding: 3px;
   margin: 5px;
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.1);
 }
 
 .who-to-follow__block {
