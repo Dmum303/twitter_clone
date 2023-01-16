@@ -35,7 +35,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_120220) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    # screen name is username
     t.string "screen_name"
+    # real name is real name
     t.string "real_name"
   end
 
