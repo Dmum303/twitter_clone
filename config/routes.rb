@@ -3,10 +3,7 @@ Rails.application.routes.draw do
   # root
   root "posts#index"
 
-  #posts and comments route # resources creates all CRUD routes auto
-  resources :posts do
-    resources :comments
-  end
+  root "sessions#login"
 
   #signup and sessions
   get "signup", to: "users#new"
