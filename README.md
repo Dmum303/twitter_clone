@@ -1,5 +1,31 @@
 # README
 
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+- start sever: bin/rails server or rails s
+- rails IRB in/rails console
+
+- Ruby version
+
+- System dependencies
+
+- Configuration
+
+- Database creation
+
+- Database initialization
+
+- How to run the test suite
+
+- Services (job queues, cache servers, search engines, etc.)
+
+- Deployment instructions
+
+- ...
+
 # Bitter_twitter_clone
 
 From makers tech
@@ -72,6 +98,8 @@ If you have time you can implement the following:
 
 In order to start a conversation as a maker I want to reply to a peep from another maker.
 
+# Designs
+=======
 
 
          Client access              Server
@@ -118,3 +146,9 @@ In order to start a conversation as a maker I want to reply to a peep from anoth
                                   │                              │
                                   │                              │
                                   └──────────────────────────────┘
+
+A user can have many tweets
+A tweet can only have one user - tweet has user FK - can user this to look up user in db
+
+A tweet can have many comments
+A comment can only have one tweet - comment has tweet FK - can user this to look up user in db

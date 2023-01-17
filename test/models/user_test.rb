@@ -4,4 +4,45 @@ class UserTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+  # create test to check new user is valid
+  test "user is valid with valid attributes" do
+    user =
+      User.new(
+        name: "John Doe",
+        email: "johndoe@example.com",
+        password: "password"
+      )
+    assert user.valid?
+  end
+
+  test "user is not valid without a name" do
+    user = User.new(email: "johndoe@example.com", password: "password")
+    assert_not user.valid?
+  end
+
+  test "user is not valid without an email" do
+    user = User.new(name: "John Doe", password: "password")
+    assert_not user.valid?
+  end
+
+  test "user is not valid without a password" do
+    user = User.new(name: "John Doe", email: "johndoe@example.com")
+    assert_not user.valid?
+  end
+
+  test "user email must be unique" do
+    user1 =
+      User.create(
+        name: "John Doe",
+        email: "johndoe@example.com",
+        password: "password"
+      )
+    user2 =
+      User.new(
+        name: "Jane Doe",
+        email: "johndoe@example.com",
+        password: "password"
+      )
+    assert_not user2.valid?
+  end
 end
