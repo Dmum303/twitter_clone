@@ -31,7 +31,8 @@
         <% @posts.each do |post|%>
         <%= link_to post do%>
         <div class="tweet">
-            <%=image_tag 'cat.jpeg', :class => "tweet__author-logo" %>
+            <!--<%=image_tag 'cat.jpeg', :class => "tweet__author-logo" %>-->
+            <%= embedded_svg('noun-genders-1496720', class: 'logged-in-as__user-logo') %>
             <div class="tweet__main">
                 <div class="tweet__header">
                     <div class="tweet__author-name">
