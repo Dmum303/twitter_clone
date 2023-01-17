@@ -1,0 +1,63 @@
+<div class="layout">
+    <div class="layout__left-sidebar">
+        <div class="contain">
+            <% if logged_in? %>
+            <%= render "sidebar-menu"%>
+            <% else %>
+            <%= render "sidebar-menu-logged-out"%>
+            <% end %>
+
+        </div>
+    </div>
+
+
+    <div class="layout__main">
+            <% if logged_in? %>
+            <div class="home-header">
+                <div class="home-header__content">
+                    Home
+                </div>
+            </div>
+            <%= render "form", post: @post %>
+            <div class="show-tweets">
+                <div class="show-tweets__align">
+                    <span class="show-tweets__text">
+                        Show 280 Tweets
+                    </span>
+                </div>
+            </div>
+            <% end %>
+
+        <% @posts.each do |post|%>
+        <%= link_to post do%>
+        <div class="tweet">
+            <%=image_tag 'cat.jpeg', :class => "tweet__author-logo" %>
+            <div class="tweet__main">
+                <div class="tweet__header">
+                    <div class="tweet__author-name">
+                        <%= find_username_by_id(post.user_id)%>
+                    </div>
+                    <div class="tweet__author-slug">
+                        @<%= find_username_by_id(post.user_id)%>
+                    </div>
+                    <div class="tweet__publish-time">
+                        <%= ((Time.now() - post.created_at) / 3600).round(1)%> hours ago
+                    </div>
+                </div>
+                <div class="tweet__content">
+                    <%= post.body %>
+                    <img class="tweet__image" src="" />
+                </div>
+            </div>
+        </div>
+        <% end %>
+        <% end %>
+
+    </div>
+    <% if logged_in? %>
+    <%=render "rightside-content"%>
+    <% else %>
+    <%=render "rightside-content-logged-out"%>
+    <% end %>
+
+</div>

@@ -1,0 +1,26 @@
+<div class="layout">
+    <div class="layout__left-sidebar">
+        <div class="contain">
+            <% if logged_in? %>
+            <%= render "sidebar-menu"%>
+            <% else %>
+            <%= render "sidebar-menu-logged-out"%>
+            <% end %>
+
+        </div>
+    </div>
+
+
+    <div class="layout__main">
+        <% if logged_in? %>
+            <h1 class="home-header__content">New Tweet</h1>
+            <%= render "form", post: @post %>
+        <% end %>
+    </div>
+    <% if logged_in? %>
+    <%=render "rightside-content"%>
+    <% else %>
+    <%=render "rightside-content-logged-out"%>
+    <% end %>
+
+</div>

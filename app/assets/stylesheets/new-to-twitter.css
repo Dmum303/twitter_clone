@@ -1,0 +1,52 @@
+.new-to-twitter {
+  border-radius: 15px;
+  background: #f5f8fa;
+  border: 5px solid #f5f8fa;
+  padding: 3px;
+  margin: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.1);
+}
+
+.new-to-twitter__block {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-to-twitter__heading {
+  font-size: 19px;
+  font-weight: bold;
+  color: #14171a;
+}
+
+.new-to-twitter__blurb {
+  font-size: 15px;
+  font-weight: 300;
+  color: #657786;
+}
+
+.new-to-twitter__terms {
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: #657786;
+  border-top: 1px solid #e6ece6;
+}
+
+.new-to-twitter__buttons {
+  border: 1px solid #1da0f2;
+  color: #1da0f2;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 15px;
+  padding: 5px;
+  min-width: 67px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.new-to-twitter__buttons:hover {
+  background: rgba(29, 161, 242, 0.1);
+  cursor: pointer;
+}
