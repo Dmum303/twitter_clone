@@ -97,31 +97,10 @@ Your README should indicate the technologies used, and give instructions on how 
 If you have time you can implement the following:
 
 In order to start a conversation as a maker I want to reply to a peep from another maker.
-And/Or:
-
-Work on the CSS to make it look good.
-Good luck and let the chitter begin!
-
-Code Review
-In code review we'll be hoping to see:
-
-All tests passing
-High Test coverage (>95% is good)
-The code is elegant: every class has a clear responsibility, methods are short etc.
-Reviewers will potentially be using this code review rubric. Referring to this rubric in advance may make the challenge somewhat easier. You should be the judge of how much challenge you want at this moment.
-
-Notes on test coverage
-Please ensure you have the following AT THE TOP of your spec_helper.rb in order to have test coverage stats generated on your pull request:
-
-require 'simplecov'
-require 'simplecov-console'
-
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
-SimpleCov::Formatter::Console,
-
-# Want a nice code coverage website? Uncomment this next line!
 
 # Designs
+=======
+
 
          Client access              Server
 
