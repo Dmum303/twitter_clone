@@ -69,3 +69,15 @@ a:link {
 .tweet__content {
   text-decoration: none;
 }
+
+.tweet__reply-edit-destroy {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.tweet__reply-edit-destroy-text {
+  color: #657786;
+  font-size: 15px;
+  margin-left: 15px;
+}

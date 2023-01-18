@@ -36,11 +36,11 @@
      <% if current_user.username == find_username_by_id(@post.user_id)%>
         <div class="tweet">
           <div class="tweet__reply-edit-destroy">
-            <%= link_to "Edit", edit_post_path(@post) %>
+            <%= link_to "Edit", edit_post_path(@post), class: "tweet__reply-edit-destroy-text" %>
             <%= link_to "Destroy", post_path(@post), data: {
                                 turbo_method: :delete,
                                 turbo_confirm: "Are you sure?"
-                              } %>
+                              }, class: "tweet__reply-edit-destroy-text" %>
           </div>
         </div>
     <% end %>
