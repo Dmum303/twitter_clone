@@ -12,13 +12,11 @@
 
       <%= form_with(model: @user, local: true) do |f| %>
           <% if @user.errors.any? %>
-          <%= p  @user.errors.any?%>
            <div id="error_explanation">
-              <h2><%=  pluralize(@user.errors.count, "error") %> prohibited this article from being saved:</h2>
+              <h2 class="signup-form__error-title"><%=  pluralize(@user.errors.count, "error") %> please correct:</h2>
               <ul>
               <% @user.errors.full_messages.each do |msg| %>
-                <%= p msg %>
-                <li><%= msg %></li>
+                <li class="signup-form__errors"><%= msg %></li>
               <% end %>
               </ul>
             </div>
@@ -35,7 +33,7 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :your_name %><br/>
+        <%= f.label :name %><br/>
         <%= f.text_field :name, class: "signup-form-control" %>
       </div>
 
@@ -48,7 +46,7 @@
         <label for="checkbox">I agree <a href="#">Terms & Conditions</a></label>
       </div>
       <div class="form-group">
-        <%= f.submit class: "signup-form-button", data: { turbo: false }%>
+        <%= f.submit class: "signup-form-button", data: { turbo: false }, local: true%>
       </div>
       <div class="signup-form__member">
         Already a member?

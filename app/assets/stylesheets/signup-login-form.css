@@ -98,3 +98,31 @@ body {
   text-decoration: none;
   color: #464647;
 }
+
+.field_with_errors {
+  /* padding: 2px; */
+  /* background-color: red; */
+  /* display: table; */
+
+  color: red;
+}
+
+br {
+  content: '';
+}
+
+.signup-form__error-title {
+  color: red;
+  font-size: 1em;
+  margin-top: 0.2rem;
+  text-align: center;
+}
+
+.signup-form__errors {
+  color: red;
+  font-size: 0.7rem;
+  margin-top: 0.2rem;
+  list-style: none;
+  text-align: center;
+  margin-right: 35px;
+}
