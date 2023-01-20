@@ -7,4 +7,10 @@ class User < ApplicationRecord
   validates :password, presence: true
   validates :username, presence: true, uniqueness: true
   validates :name, presence: true
+
+  private
+
+  # def email_format_regex
+  #   regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  # end
 end
