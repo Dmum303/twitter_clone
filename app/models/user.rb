@@ -1,16 +1,30 @@
 class User < ApplicationRecord
+  VALID_PASWORD_REGEX =
+    /\A
+  (?=.{8,}) # at least 8 characters
+  (?=.*\d) # at least 1 digit
+  (?=.*[a-z]) # at least 1 lowercase letter
+  (?=.*[A-Z]) # at least 1 uppercase letter
+  (?=.*[[:^alnum:]]) # at least 1 special character
+  /x
+
   has_secure_password
   has_many :posts
-  # username here should be name email - DB to be amended
-  # # screen name is username
-  validates :email, presence: true, length: { minimum: 3 }, uniqueness: true
-  validates :password, presence: true
+
+  validates :email,
+            presence: true,
+            uniqueness: true,
+            format: {
+              with: URI::MailTo::EMAIL_REGEXP,
+              message: "only allows valid emails"
+            }
+  validates :password,
+            presence: true,
+            format: {
+              with: VALID_PASWORD_REGEX,
+              message:
+                "Password must be at least 8 characters, with at least 1 digit/1 lowercast letter/1uppercase letter/1 special character"
+            }
   validates :username, presence: true, uniqueness: true
   validates :name, presence: true
-
-  private
-
-  # def email_format_regex
-  #   regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  # end
 end
