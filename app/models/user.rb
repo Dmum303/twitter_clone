@@ -23,7 +23,7 @@ class User < ApplicationRecord
             format: {
               with: VALID_PASWORD_REGEX,
               message:
-                "Password must be at least 8 characters, with at least 1 digit/1 lowercast letter/1uppercase letter/1 special character"
+                "Password must be at least 8 characters, with at least 1 digit/1 lowercase letter/1uppercase letter/1 special character"
             }
   validates :username, presence: true, uniqueness: true
   validates :name, presence: true
