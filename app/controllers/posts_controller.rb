@@ -15,7 +15,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post[:user_id] = session[:user_id]
-    # this part could be an issue with the comments
     if @post.save
       redirect_to root_path
     else

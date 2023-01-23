@@ -9,7 +9,6 @@ class UsersController < ApplicationController
       flash[:notice] = "User created."
       puts "User created."
       redirect_to login_path
-      # redirect_to root_path
     else
       render "new"
     end

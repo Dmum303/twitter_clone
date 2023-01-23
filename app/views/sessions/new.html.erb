@@ -24,7 +24,7 @@
           <a href="#">Forgot Password</a>
         </div>
         <div class="form-group">
-          <%= f.submit "Log in", class: "signup-form-button" %>
+          <%= f.submit "Log in", class: "signup-form-button", data: { turbo: false }, local: true %>
         </div>
         <div class="signup-form__member">
           Not a member?

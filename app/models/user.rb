@@ -16,7 +16,7 @@ class User < ApplicationRecord
             uniqueness: true,
             format: {
               with: URI::MailTo::EMAIL_REGEXP,
-              message: "only allows valid emails"
+              message: "Only allows valid emails"
             }
   validates :password,
             presence: true,
