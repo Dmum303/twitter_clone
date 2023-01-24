@@ -1,6 +1,6 @@
 # Twitter Clone!
 
-This is a portfolio project to build a CRUD (create, read, update, and delete) app. It is the first project
+This is a portfolio project to build a MVC (Model, View, Controller) CRUD (create, read, update, and delete) app. It is the first project
 I have undertaken after completing the Makers tech bootcamp and I wanted to build something to showcase some
 of the skills I've acquired!
 
@@ -38,55 +38,51 @@ someone might need to after Elon has finished playing around with it!
 
 - I am in the process of deplying this
 
-### Designs
+### Diagram
 
-=======
+Views:
 
-         Client access              Server
+Users
 
-         pages user will see                             classes
-     ┌─────────────────────────┐  ┌──────────────────────────────┐       ┌─────────────────────────┐
-     │                         │  │                              │       │                         │
-     │   home login page       │  │   Login /sign up page        │       │   Login model class     │     DB: Postgres SQl
-     │                         │  │                              │       │                         │
-     │   either sign up or     │  │  takes email as username     │       │                         │     ORM: Active record
-     │                         │  │  and password(database)      │       │                         │
-     │  sign in                │  │                              ├──────►│                         │     Users table
-     │                         │  │  this is the home page       │       │                         │
-     │  takes you to the peeps │  │  once logged in redirect to  │       │                         │     Posts table
-     │ page                    │  │  peeps page                  │       │                         │
-     │                         │  │                              │       │                         │
-     │                         │  │                              │       │                         │
-     └─────────────────────────┘  └──────────────┬───────────────┘       └─────────────────────────┘
-                                                 │
-      ┌────────────────────────┐  ┌──────────────▼───────────────┐      ┌──────────────────────────┐
-      │  peeps page            │  │                              │      │     Peep model class     │
-      │                        │  │  Peeps                       │      │                          │
-      │  can post a peep, see  │  │                              │      │                          │
-      │                        │  │                              │      │                          │
-      │  a list of all peeps   │  │                              │      │                          │
-      │                        │  │                              ├─────►│                          │
-      │  has a logout button   │  │                              │      │                          │
-      │                        |  |                              │      │                          │
-      │ that takes you back to │  │                              │      │                          │
-      │ login                  │  │                              │      │                          │
-      └────────────────────────┘  └──────────────────────────────┘      └──────────────────────────┘
-          View                              Controller                           Model
+Sessions
 
-                                  ┌──────────────────────────────┐
-                                  │  App  file                   │
-                                  │                              │
-                                  │ takes get and post requests  │
-                                  │                              │
-                                  │ controller                   │
-                                  │                              │
-                                  │                              │
-                                  │                              │
-                                  │                              │
-                                  │                              │
-                                  │                              │
-                                  └──────────────────────────────┘
+Posts
 
+Comments
+
+▲ │
+│ │
+│ ▼
+
+Controllers:
+
+Users
+
+Login/sessions
+
+Post/Tweets
+
+Comment/Replys
+
+▲ │
+│ │
+│ ▼
+
+Models:
+
+User
+
+Post
+
+Comment
+
+▲ │
+│ │
+│ ▼
+
+DB:
+
+Sqlite3
 A user can have many tweets
 A tweet can only have one user - tweet has user FK - can user this to look up user in db
 
