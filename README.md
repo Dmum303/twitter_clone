@@ -83,6 +83,7 @@ Comment
 DB:
 
 Sqlite3
+
 A user can have many tweets
 A tweet can only have one user - tweet has user FK - can user this to look up user in db
 
