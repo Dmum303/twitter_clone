@@ -18,7 +18,10 @@ Things you may want to cover:
 
 - Database initialization
 
-- How to run the test suite
+- How to run the test suite:
+- for individual tests
+- bin/rails test test/models/user_test.rb
+- Run all tests bin/rails test
 
 - Services (job queues, cache servers, search engines, etc.)
 

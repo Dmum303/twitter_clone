@@ -13,7 +13,7 @@
 
         <div class="form-group">
           <%= f.label :email %><br/>
-          <%= f.text_field :username, class: "signup-form-control" %>
+          <%= f.text_field :email, class: "signup-form-control" %>
         </div>
 
         <div class="form-group">
@@ -24,7 +24,7 @@
           <a href="#">Forgot Password</a>
         </div>
         <div class="form-group">
-          <%= f.submit "Log in", class: "signup-form-button" %>
+          <%= f.submit "Log in", class: "signup-form-button", data: { turbo: false }, local: true %>
         </div>
         <div class="signup-form__member">
           Not a member?

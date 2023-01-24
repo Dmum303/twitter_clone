@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_05_120220) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_17_150229) do
   create_table "comments", force: :cascade do |t|
     t.text "body"
     t.integer "post_id", null: false
@@ -30,15 +30,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_120220) do
   end
 
   create_table "users", force: :cascade do |t|
-    # username here should be name email - DB to be amended
-    t.string "username"
+    t.string "email"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    # screen name is username
-    t.string "screen_name"
-    # real name is real name
-    t.string "real_name"
+    t.string "username"
+    t.string "name"
   end
 
   add_foreign_key "comments", "posts"

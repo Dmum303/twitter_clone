@@ -11,20 +11,30 @@
       <h1 class="signup-form__header">Create your account</h1>
 
       <%= form_with(model: @user, local: true) do |f| %>
+          <% if @user.errors.any? %>
+           <div id="error_explanation">
+              <h2 class="signup-form__error-title"><%=  pluralize(@user.errors.count, "error") %> please correct:</h2>
+              <ul>
+              <% @user.errors.full_messages.each do |msg| %>
+                <li class="signup-form__errors"><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
 
       <div class="form-group">
-        <%= f.label :email %><br/>
+        <%= f.label :username %><br/>
         <%= f.text_field :username, class: "signup-form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :username %><br/>
-        <%= f.text_field :screen_name, class: "signup-form-control" %>
+        <%= f.label :name %><br/>
+        <%= f.text_field :name, class: "signup-form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :your_name %><br/>
-        <%= f.text_field :real_name, class: "signup-form-control" %>
+        <%= f.label :email %><br/>
+        <%= f.text_field :email, class: "signup-form-control" %>
       </div>
 
       <div class="form-group">
@@ -36,13 +46,14 @@
         <label for="checkbox">I agree <a href="#">Terms & Conditions</a></label>
       </div>
       <div class="form-group">
-        <%= f.submit class: "signup-form-button"%>
+        <%= f.submit class: "signup-form-button", data: { turbo: false }, local: true%>
       </div>
       <div class="signup-form__member">
         Already a member?
           <%= link_to "login", login_path%>
       </div>
       <% end %>
+
     </div>
 
 </div>

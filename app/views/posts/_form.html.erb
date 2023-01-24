@@ -1,7 +1,7 @@
 <%= form_with model: post do |form| %>
 <div class="create-tweet__block">
-   <!-- <%= form.label :body %><br> -->
-    <%=image_tag 'cat.jpeg', :class => "create-tweet__form-author-logo" %>
+
+    <%= embedded_svg('noun-genders-1496720', class: 'logged-in-as__user-logo') %>
     <%= form.text_area :body, placeholder: "What's happening?", class: "create-tweet__tweet-input" %>
     <% post.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
@@ -9,6 +9,6 @@
 
 </div>
     <div class="create-tweet__flex-submit">
-    <%= form.submit :class => "create-tweet__submit" %>
+    <%= form.submit "Tweet", :class => "create-tweet__submit" %>
     </div>
 <% end %>

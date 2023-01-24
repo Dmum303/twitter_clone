@@ -15,11 +15,10 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post[:user_id] = session[:user_id]
-    # this part could be an issue with the comments
     if @post.save
       redirect_to root_path
     else
-      render :new, status: :unprocessable_entity
+      # render :new, status: :unprocessable_entity
     end
   end
 
@@ -43,15 +42,6 @@ class PostsController < ApplicationController
 
     redirect_to root_path, status: :see_other
   end
-
-  # def edit
-  #   # method inherited from app_con
-  #   if !logged_in?
-  #     #redirect to standard index
-  #   else
-  #     #do cool stuff
-  #   end
-  # end
 
   private
 

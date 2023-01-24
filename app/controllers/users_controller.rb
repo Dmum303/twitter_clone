@@ -9,7 +9,6 @@ class UsersController < ApplicationController
       flash[:notice] = "User created."
       puts "User created."
       redirect_to login_path
-      # redirect_to root_path
     else
       render "new"
     end
@@ -18,6 +17,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :screen_name, :real_name)
+    params.require(:user).permit(:email, :password, :username, :name)
   end
 end

@@ -13,7 +13,8 @@
           </div>
       </div>
     <div class="tweet">
-      <%=image_tag 'cat.jpeg', :class => "tweet__author-logo" %>
+      <!--<%=image_tag 'cat.jpeg', :class => "tweet__author-logo" %>-->
+      <%= embedded_svg('noun-genders-1496720', class: 'logged-in-as__user-logo') %>
       <div class="tweet__main">
           <div class="tweet__header">
             <div class="tweet__author-name">
@@ -32,15 +33,17 @@
           </div>
       </div>
     </div>
-    <div class="tweet">
-      <div class="tweet__reply-edit-destroy">
-        <%= link_to "Edit", edit_post_path(@post) %>
-        <%= link_to "Destroy", post_path(@post), data: {
-                            turbo_method: :delete,
-                            turbo_confirm: "Are you sure?"
-                          } %>
-      </div>
-    </div>
+     <% if current_user.username == find_username_by_id(@post.user_id)%>
+        <div class="tweet">
+          <div class="tweet__reply-edit-destroy">
+            <%= link_to "Edit", edit_post_path(@post), class: "tweet__reply-edit-destroy-text" %>
+            <%= link_to "Destroy", post_path(@post), data: {
+                                turbo_method: :delete,
+                                turbo_confirm: "Are you sure?"
+                              }, class: "tweet__reply-edit-destroy-text" %>
+          </div>
+        </div>
+    <% end %>
     <div class="home-header">
         <div class="home-header__content">
             Comments
@@ -49,7 +52,8 @@
 
 <% @post.comments.reverse.each do |comment| %>
     <div class="tweet">
-    <%=image_tag 'cat.jpeg', :class => "tweet__author-logo" %>
+
+    <%= embedded_svg('noun-genders-1496720', class: 'logged-in-as__user-logo') %>
     <div class="tweet__main">
       <div class="tweet__header">
         <div class="tweet__author-name">
@@ -68,7 +72,8 @@
 
 <%= form_with model: [ @post, @post.comments.build ] do |form| %>
 <div class="create-tweet__block">
-  <%=image_tag 'cat.jpeg', :class => "create-tweet__form-author-logo" %>
+
+  <%= embedded_svg('noun-genders-1496720', class: 'logged-in-as__user-logo') %>
     <%= form.text_area :body, placeholder: "Tweet your reply", class: "create-tweet__tweet-input" %>
 </div>
     <div class="create-tweet__flex-submit">
