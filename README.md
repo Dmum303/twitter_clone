@@ -1,109 +1,45 @@
-# README
+# Twitter Clone!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a portfolio project to build a CRUD (create, read, update, and delete) app. It is the first project
+I have undertaken after completing the Makers tech bootcamp and I wanted to build something to showcase some
+of the skills I've acquired!
 
-Things you may want to cover:
+I wanted to use the Ruby on Rails framework as ruby is a fun, user friendly langauge, optimsed for the programmer
+and wanted to see how this was applied to the framework - I also have an oppertunity to practice some frontend styling
+as I largely worked on the backend in our Makers projects. It should function reasonably similar to twitter in that
+you can sign up, the email/username need to be unique and password should be strong, then you'll need to login -
+which creates a new unique session for you and then you leave a tweet - the tweets are displayed with newest first.
+You can also leave a comment/reply to any tweet - when you tweet or reply your username and the time are also
+displayed - there are also min and max lengths for tweet/reply content.
 
-- start sever: bin/rails server or rails s
-- rails IRB in/rails console
+When you are not logged in you can view the list of tweets but cannot add to them, the sidebars are also dependant
+on being logged in - the left has less options, the right switches the trends for you/who to follow blocks for signup/
+login buttons. When you are logged in your username and a logout button is displayed on the bottom left of the main
+page. Some of the features are dummy ones to bulk up the content - I didn't want to create all of twitter, although
+someone might need to after Elon has finished playing around with it!
 
-- Ruby version
+#### Techs
 
-- System dependencies
+- Ruby 3.0.0
+- Ruby on Rails 7
+- sqlite3 1.4
 
-- Configuration
+#### How to do stuff
 
-- Database creation
+- Clone this repo and bundle install
 
-- Database initialization
+- Start sever: bin/rails server or rails s
 
-- How to run the test suite:
-- for individual tests
-- bin/rails test test/models/user_test.rb
-- Run all tests bin/rails test
+- How to run the test suite: bin/rails test
+  (for individual tests add the path of the file to be tested eg bin/rails test test/models/user_test.rb)
 
-- Services (job queues, cache servers, search engines, etc.)
+- To start the console: rails console
 
-- Deployment instructions
+- I am in the process of deplying
 
-- ...
+### Designs
 
-# Bitter_twitter_clone
-
-From makers tech
-We are going to write a small Twitter clone that will allow the users to post messages to a public stream.
-
-## Features:
-
-#### STRAIGHT UP
-
-As a Maker
-So that I can let people know what I am doing
-I want to post a message (peep) to chitter
-(post msg to chitter)
-As a maker
-So that I can see what others are saying
-I want to see all peeps in reverse chronological order
-(View peeps in order)
-As a Maker
-So that I can better appreciate the context of a peep
-I want to see the time at which it was made
-(With time stamp)
-As a Maker
-So that I can post messages on Chitter as me
-I want to sign up for Chitter
-(Sign up - tokens)
-
-#### HARDER
-
-As a Maker
-So that only I can post messages on Chitter as me
-I want to log in to Chitter
-(Login - tokens)
-As a Maker
-So that I can avoid others posting messages on Chitter as me
-I want to log out of Chitter
-(Singout tokens)
-
-#### ADVANCED
-
-As a Maker
-So that I can stay constantly tapped in to the shouty box of Chitter
-I want to receive an email if I am tagged in a Peep
-
-### Technical Approach:
-
-In the last two weeks, you integrated a database using the pg gem and Repository classes. You also implemented small web applications using Sinatra, RSpec, HTML and ERB views to make dynamic webpages. You can continue to use this approach when building Chitter Challenge.
-
-You can refer to the guidance on Modelling and Planning a web application, to help you in planning the different web pages you will need to implement this challenge. If you'd like to deploy your app to Heroku so other people can use it, you can follow this guidance.
-
-If you'd like more technical challenge now, try using an Object Relational Mapper as the database interface, instead of implementing your own Repository classes.
-
-Some useful resources: Ruby Object Mapper
-
-#### ROM
-
-ActiveRecord
-
-ActiveRecord ORM
-Sinatra & ActiveRecord setup
-Notes on functionality:
-You don't have to be logged in to see the peeps.
-Makers sign up to chitter with their email, password, name and a username (e.g. samm@makersacademy.com, password123, Sam Morgan, sjmog).
-The username and email are unique.
-Peeps (posts to chitter) have the name of the maker and their user handle.
-Your README should indicate the technologies used, and give instructions on how to install and run the tests.
-
-## Bonus:
-
-If you have time you can implement the following:
-
-In order to start a conversation as a maker I want to reply to a peep from another maker.
-
-# Designs
 =======
-
 
          Client access              Server
 
