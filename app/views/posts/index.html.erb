@@ -29,7 +29,31 @@
             <% end %>
 
         <% @posts.each do |post|%>
+        <% if logged_in? %>
         <%= link_to post do%>
+        <div class="tweet">
+            <!--<%=image_tag 'cat.jpeg', :class => "tweet__author-logo" %>-->
+            <%= embedded_svg('noun-genders-1496720', class: 'logged-in-as__user-logo') %>
+            <div class="tweet__main">
+                <div class="tweet__header">
+                    <div class="tweet__author-name">
+                        <%= find_username_by_id(post.user_id)%>
+                    </div>
+                    <div class="tweet__author-slug">
+                        @<%= find_username_by_id(post.user_id)%>
+                    </div>
+                    <div class="tweet__publish-time">
+                        <%= ((Time.now() - post.created_at) / 3600).round(1)%> hours ago
+                    </div>
+                </div>
+                <div class="tweet__content">
+                    <%= post.body %>
+                    <img class="tweet__image" src="" />
+                </div>
+            </div>
+        </div>
+        <% end %>
+        <% else%>
         <div class="tweet">
             <!--<%=image_tag 'cat.jpeg', :class => "tweet__author-logo" %>-->
             <%= embedded_svg('noun-genders-1496720', class: 'logged-in-as__user-logo') %>
