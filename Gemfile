@@ -78,3 +78,4 @@ gem 'bcrypt', '3.1.18', :require => 'bcrypt'
 gem 'flexbox-rails'
 
 gem 'byebug', require: true
+
