@@ -23,7 +23,7 @@ someone might need to after Elon has finished playing around with it!
 
 #### Techs
 
-- Ruby 3.0.0
+- Ruby 3.1.3
 - Ruby on Rails 7
 - sqlite3 1.4
 
