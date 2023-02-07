@@ -1,5 +1,7 @@
 # Twitter Clone!
 
+link: https://warm-beyond-56666.herokuapp.com/
+
 This is a portfolio project to build a MVC (Model, View, Controller) CRUD (create, read, update, and delete) app. It is the first project
 I have undertaken after completing the Makers tech bootcamp and I wanted to build something to showcase some
 of the skills I've acquired!
@@ -21,7 +23,7 @@ someone might need to after Elon has finished playing around with it!
 
 #### Techs
 
-- Ruby 3.0.0
+- Ruby 3.1.3
 - Ruby on Rails 7
 - sqlite3 1.4
 
@@ -35,57 +37,3 @@ someone might need to after Elon has finished playing around with it!
   (for individual tests add the path of the file to be tested eg bin/rails test test/models/user_test.rb)
 
 - To start the console: rails console
-
-- I am in the process of deplying this
-
-### Diagram
-
-Views:
-
-Users
-
-Sessions
-
-Posts
-
-Comments
-
-▲ │
-│ │
-│ ▼
-
-Controllers:
-
-Users
-
-Login/sessions
-
-Post/Tweets
-
-Comment/Replys
-
-▲ │
-│ │
-│ ▼
-
-Models:
-
-User
-
-Post
-
-Comment
-
-▲ │
-│ │
-│ ▼
-
-DB:
-
-Sqlite3
-
-A user can have many tweets
-A tweet can only have one user - tweet has user FK - can user this to look up user in db
-
-A tweet can have many comments
-A comment can only have one tweet - comment has tweet FK - can user this to look up user in db
