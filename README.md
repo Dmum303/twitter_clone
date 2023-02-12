@@ -1,4 +1,4 @@
-# Twitter Clone!
+# Bitter a Twitter Clone!
 
 link: https://warm-beyond-56666.herokuapp.com/
 

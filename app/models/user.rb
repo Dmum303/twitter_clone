@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  before_save :downcase_fields
+
   VALID_PASWORD_REGEX =
     /\A
   (?=.{8,}) # at least 8 characters
@@ -27,4 +29,12 @@ class User < ApplicationRecord
             }
   validates :username, presence: true, uniqueness: true
   validates :name, presence: true
+
+  private
+
+  def downcase_fields
+    self.email.downcase!
+    self.username.downcase!
+  end
+
 end
