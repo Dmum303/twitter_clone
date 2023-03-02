@@ -25,13 +25,15 @@ someone might need to after Elon has finished playing around with it!
 
 - Ruby 3.1.3
 - Ruby on Rails 7
-- sqlite3 1.4
+- PostgreSQL
 
-#### How to do stuff
+##### Project setup
 
 - Clone this repo and bundle install
 
 - Start sever: bin/rails server or rails s
+
+##### Run tests
 
 - How to run the test suite: bin/rails test
   (for individual tests add the path of the file to be tested eg bin/rails test test/models/user_test.rb)
