@@ -38,4 +38,6 @@ someone might need to after Elon has finished playing around with it!
 - How to run the test suite: bin/rails test
   (for individual tests add the path of the file to be tested eg bin/rails test test/models/user_test.rb)
 
+##### Console
+
 - To start the console: rails console
