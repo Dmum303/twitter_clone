@@ -1,15 +1,28 @@
 .layout {
   display: grid;
-  grid-template-columns: 275px auto 350px;
+  /* grid-template-columns: 275px auto 350px; */
   margin: 0 auto;
   max-width: 1200px;
+  grid-template-columns: 1fr minmax(0, 6fr) 1fr; /* 1/1/1 ratio */
+  grid-template-areas: 'left main right';
 }
 
-/* .layout__left-sidebar {
-  display: flex;
-  flex-direction: column;
+.layout__left-sidebar {
+  grid-area: left;
+}
 
-} */
+.layout__main {
+  grid-area: main;
+  max-width: 800px;
+  grid-column: 2 / -2;
+  max-width: 800px; /* Set a maximum width for the main section */
+  justify-self: center;
+  margin: 0 auto;
+  overflow: auto; /* Add a scrollbar if content exceeds the maximum width */
+}
+.layout__right {
+  grid-area: right;
+}
 
 .layout__right-sidebar {
   position: fixed;

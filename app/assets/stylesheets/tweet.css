@@ -68,6 +68,7 @@ a:link {
 
 .tweet__content {
   text-decoration: none;
+  word-break: break-word;
 }
 
 .tweet__reply-edit-destroy {
