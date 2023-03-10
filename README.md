@@ -21,13 +21,13 @@ login buttons. When you are logged in your username and a logout button is displ
 page. Some of the features are dummy ones to bulk up the content - I didn't want to create all of twitter, although
 someone might need to after Elon has finished playing around with it!
 
-#### Techs
+#### Tech
 
 - Ruby 3.1.3
 - Ruby on Rails 7
 - sqlite3 1.4
 
-#### How to do stuff
+#### Installing
 
 - Clone this repo and bundle install
 
@@ -37,3 +37,5 @@ someone might need to after Elon has finished playing around with it!
   (for individual tests add the path of the file to be tested eg bin/rails test test/models/user_test.rb)
 
 - To start the console: rails console
+
+- rvm --default use 3.1.3
